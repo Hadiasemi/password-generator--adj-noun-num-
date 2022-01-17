@@ -2,7 +2,6 @@ package main
 
 import(
     "fmt"
-    "strconv"
 )
 
 // noun :=[...]string {"airplane","apple","automobile","ball","balloon","banana","beach","bird","boat","boot","bottle","box","breeze","bug","bush","butter","canoe","carrot","cartoon","cello","chair","cheese","coast","coconut","comet","cream","curtain","daisy","desk","diamond","door","earth","elephant","emerald","fire","flamingo","flower","flute","forest","free","giant","giraffe","glove","grape","grasshopper","hair","hat","hill","house","ink","iris","jade","jungle","kangaroo","kayak","lake","lemon","lightning","lion","lotus","lump","mango","mint","monkey","moon","motorcycle","mountain","nest","oboe","ocean","octopus","onion","orange","orchestra","owl","path","penguin","phoenix","piano","pineapple","planet","pond","potato","prairie","quail","rabbit","raccoon","raid","rain","raven","river","road","rosebud","ruby","sea","ship","shoe","shore","shrub","sitter","skates","sky","socks","sparrow","spider","squash","squirrel","star","stream","street","sun","table","teapot","terrain","tiger","toast","tomato","trail","train","tree","truck","trumpet","tuba","tulip","umbrella","unicorn","unit","valley","vase","violet","violin","water","wind","window","zebra","zoo"}
@@ -15,9 +14,9 @@ func main() {
         for _, noun := range noun_full {
             for i := 0; i < 1000; i++ {
                 s := ""
-                if i < 0 {s += "0"}
+                if i < 10 {s += "0"}
                 if i < 100 {s += "0"}
-                fmt.Println(adj + noun+ s + strconv.Itoa(i))
+                fmt.Printf("%s%s%s%d\n", adj, noun, s, i)
             }
         }
         
