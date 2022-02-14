@@ -4,5 +4,7 @@
 
 ```bash
 go build password.go
-./password
+./password | aircrack-ng -w - CAP.cap -b BSSID
 ```
+
+
